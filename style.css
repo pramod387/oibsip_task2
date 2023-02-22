@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    /* background-image: url(pk2.jpg); */
+    /* overflow-x: hidden; */
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 25px 7%;
+}
+.logo img{
+    max-width: 50%;
+    width: 120px;
+    height: auto;
+    border-radius: 75%;
+    border: 1px solid red;
+}
+.navbar{
+    display: flex;
+}
+.navbar li {
+    position: relative;
+}
+.navbar a {
+    color: #161616;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 20px ;
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ef0454;
+    left: 0;
+    bottom: -4px;
+    transition: ease .42s;
+
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 30px;
+    color: #161616;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.btn{
+    font-size:14px;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 600;
+    height: 60px;
+    line-height: 60px;
+    background: #ef0454;
+    color: #fff;
+    border-radius: 20px ;
+    padding: 0 20px;
+    text-transform: uppercase;
+    transition: all .34s;
+
+}
+.btn:hover{
+    opacity: 0.8;
+    transform: translateY(-10px);
+}
+section{
+    padding: 0 15%;
+    
+}
+.container{
+    height: 91vh;
+    width: 100%;
+    background: url(pk2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    
+} 
+.text{
+    padding-top: 70px;
+
+}
+.text .slide {
+    margin-bottom: 20px;
+
+}
+.text .one {
+    height: 40px;
+    padding: 0px 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    font-weight: 500;
+    background: #ffbb01;
+    color: #fff;
+    display: inline-block;
+    margin-right: 22px;
+
+}
+.text .two{
+    font-size: 24px ;
+    color: #161616;
+    display: inline-block;
+    font-weight: 500;
+
+}
+.text h1{
+    font-size: 120px;
+    font-weight: 700;
+    color: #161616;
+    line-height: 0.9;
+    margin: 0 0 8px;
+}
+.text h2 {
+    color: #161616;
+    margin: 0 0 8px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+
+}
+span {
+    color: #ef0454;
+
+}
+.text p{
+    color: #6a6a6a;
+    font-size: 20px;
+    line-height: 1.6 ;
+    margin-bottom: 40px;
+
+}
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn2{
+    font-size: 14px;
+    font-weight: 600;
+    color: #161616;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+
+}
+.btn2 span i{
+    height: 70px;
+    display: 70px;
+    background: #fff;
+    color: #ef0454;
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:55%;
+    box-shadow: 0px 10px 8px rgb(3 12 29 / 8%);
+    margin-right: 20px;
+    transition: ease .30s ;
+
+}
+.btn2 span i:hover{
+    background: #ef0454;
+    color: #fff;
+}
+.social{
+    position: absolute;
+    top:50%;
+    padding: 0 7% ;
+    transform: translatey(-50%);
+    
+    
+}
+.social ul li{
+    margin: 20px 0;
+
+}
+.social ul li i{
+    font-size: 22px;
+    color: #161616;
+    transition: all .30s;
+
+}
+.social ul li i:hover{
+    transform: translateY(-5px);
+    color: #ef0454;
+}
+@media (max-width: 1380px){
+    header{
+        padding: 18px 2%;
+        transition: .2s;
+
+    }
+    section{
+        padding: 0 2%;
+        transition: .2s;
+    }
+    .social{
+        display: none;
+    }
+}
+@media (max-width: 1120px)
+{
+    header{
+        padding: 14px 2%;
+
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .text h1 {
+        font-size: 78px;
+        transition: .2s;
+
+    }
+    .text h2 {
+        font-size: 58px;
+        transition: .2s;
+        
+    }
+    .text p {
+        font-size: 17px;
+        transition: .2s;
+        
+    }
+    .btn{
+        height: 50px;
+        line-height: 50px;
+        padding: 0 28px;
+    }
+    .btn2{
+        margin-left: 20px;
+    }
+    .btn2 span i{
+        height: 50px;
+        width: 50px;
+        font-weight: 30px;
+
+    }
+    .navbar{
+        position: absolute;
+        top: -500%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #ef0454;
+        text-align: left;
+        transition: all .30s ease;
+    }
+    .navbar a {
+        display: block;
+        padding: 0.2rem;
+        margin: 0.5rem;
+        color: #fff;
+        border-left: 1px solid #fff;
+    }
+    .navbar a:hover{
+        background: #fff;
+        color: #161616;
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar .active{
+        top: 100%;
+    }
+} 
+@media (max-width: 640px){
+    section {
+        padding: 0 3%;
+
+    }
+    header {
+        padding: 14px 3%;
+    }
+}
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+     /* background: rgb(253, 14, 14);  */
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 0px;
+    color: #000;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    
+
+}
+.social1{
+    list-style:none ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.social1 li{
+    margin: 0 10px;
+
+}
+.social1 a{
+    text-decoration: none;
+    color: #fff;
+}
+.social1 a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.social1 a:hover i {
+    color: aqua;
+
+}
+.footer-bottom{
+    /* background: rgb(93, 11, 225);*/
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    overflow-x: hidden;
+}
+.footer-bottom p span{
+    opacity: .4;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: rgb(255, 2, 2);
+    
+} 
